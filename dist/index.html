@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overlook Hotel</title>
-</head>
-<body>
-  <nav>
-    <label for="start">Start date:</label>
-    <input type="date" id="start" name="trip-start"
-       value="2022-01-01"
-       min="2022-01-01" max="2022-12-31">
-  </nav>
-  <img src="./images/turing-logo.png" alt="turing logo">
-
-  <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
-  <script src="bundle.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlook Hotel</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="button-hover" id="mainTitle">The Overlook Hotel</h1>
+      <button class="button-hover" id="bookRoom">Book a Room</button>
+      <section class="user-welcome" id="userWelcome">Welcome, Name!</section>
+    </header>
+    <nav class="pick-date-filter hidden" id="pickDateFilter">
+      <section class="pick-date" id="pickDate">
+        <p>Pick a Date to Book:
+          <input type="date" id="start" name="trip-start"
+           value="2022-01-01"
+           min="2022-01-01" max="2022-12-31">
+        </p>
+      </section>
+      <section class="filter-by-room" id="filterByRoom">
+        <p>Filter by Room Type:</p>
+        <button class="button-hover" id="residentialSuite">Residential Suite</button>
+        <button class="button-hover" id="suite">Suite</button>
+        <button class="button-hover" id="juniorSuite">Junior Suite</button>
+        <button class="button-hover" id="singleRoom">Single Room</button>
+      </section>
+    </nav>
+    <main>
+      <section class="login-view" id="loginView">
+        <section class="welcome-message-box">
+          <h2>Welcome to the Overlook Hotel!</h2>
+          <p>We look forward to hosting you!</p>
+        </section>
+        <form class="login-form" id="loginForm">
+          <h2>Please Login Below:</h2>
+          <label for="userName">Username:</label><br>
+          <input type="text" class="input-box" id="userNameInput" name="userName"><br>
+          <label for="password">Password:</input></label><br>
+          <input type="text" class="input-box" id="passwordInput" name="password"><br>
+          <button class="form-button" id="formButton">Submit</button>
+        </form>
+      </section>
+      <section class="home-view hidden" class="homeView">
+        <h2>Past and Upcoming Bookings</h2>
+        <section class="booking-info" id="bookingInfo">
+          <p class="booking-date" id="bookingDate">Date Booked: 1/1/2022</p>
+          <p class="room-type" id="roomType">Room Type: Suite</p>
+          <p class="bidet" id="bidet">Bidet: true</p>
+          <p class="bed-size" id="bedSize">Bed Size: King</p>
+          <p class="num-beds" id="numBeds">Number of Beds: 2</p>
+          <p class="cost-per-night" id="costPerNight">Cost Per Night: $100</p>
+        </section>
+        <p class="total-spent" id="totalSpent">Total Amount Spent of Bookings: $100</p>
+      </section>
+      <section class="booking-view hidden" id="bookingView">
+        <h2>Availble Rooms</h2>
+        <section class="available-rooms" id="availableRooms">
+          <p class="available-date" id="availableDate">Date: 1/1/2022</p>
+          <p class="available-room-type" id="availableRoomType">Room Type: Suite</p>
+          <p class="available-bidet" id="availableBidet">Bidet: true</p>
+          <p class="available-bed-size" id="availableBedSize">Bed Size: King</p>
+          <p class="available-num-beds" id="availableNumBeds">Number of Beds: 2</p>
+          <p class="available-cost-per-night" id="availableCostPerNight">Cost Per Night: $100</p>
+          <button class="book-room-button" id="bookRoomButton">Book Room</button>
+        </section>
+      </section>
+    <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
+      <script src="bundle.js"></script>
+    </main>
+  </body>
 </html>
+
+<label for="start">Start date:</label>
