@@ -29,7 +29,7 @@
       </section>
     </nav>
     <main>
-      <section class="login-view" id="loginView">
+      <section class="login-view hidden" id="loginView">
         <section class="welcome-message-box">
           <h2>Welcome to the Overlook Hotel!</h2>
           <p>We look forward to hosting you!</p>
@@ -44,7 +44,7 @@
         </form>
       </section>
       <section class="home-view hidden" class="homeView">
-        <h2>Past and Upcoming Bookings</h2>
+        <h2 class="home-title">Past and Upcoming Bookings</h2>
         <section class="booking-info" id="bookingInfo">
           <p class="booking-date" id="bookingDate">Date Booked: 1/1/2022</p>
           <p class="room-type" id="roomType">Room Type: Suite</p>
@@ -55,8 +55,8 @@
         </section>
         <p class="total-spent" id="totalSpent">Total Amount Spent of Bookings: $100</p>
       </section>
-      <section class="booking-view hidden" id="bookingView">
-        <h2>Availble Rooms</h2>
+      <section class="booking-view" id="bookingView">
+        <h2 class="booking-title">Available Rooms</h2>
         <section class="available-rooms" id="availableRooms">
           <p class="available-date" id="availableDate">Date: 1/1/2022</p>
           <p class="available-room-type" id="availableRoomType">Room Type: Suite</p>
@@ -72,5 +72,3 @@
     </main>
   </body>
 </html>
-
-<label for="start">Start date:</label>
