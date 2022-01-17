@@ -1,6 +1,83 @@
-/* This is an example of how to import a partial scss file*/
-@import '_variables';
+@import './_reset.scss';
+@import './_variables.scss';
+@import './_mixins.scss';
+
+* {
+  font-family: $palanquin;
+}
 
 body {
-  background: $primary-background;
+  background-color: $backgroundColor;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $teal;
+  background-color: $white;
+  @include box-shadow();
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 5vw;
+  height: 20%;
+}
+
+main {
+  padding: 1% 4%;
+  background-color: $white;
+  height: 80%;
+}
+
+h1 {
+  font-size: 100%;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 100%;
+  font-weight: 600;
+}
+
+button {
+  border: 0;
+  font-size: 20px;
+  @include box-shadow();
+}
+
+.login-view, .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.home-title, .booking-title {
+  @include flex-center;
+  margin-top: 30px;
+}
+
+.booking-info, .available-rooms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  border: 2px solid black;
+}
+
+.total-spent {
+  @include flex-center;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
 }
